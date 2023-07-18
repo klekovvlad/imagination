@@ -1,0 +1,42 @@
+.button {
+    cursor: pointer;
+    @include font(400);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    background: $gradient;
+    border-radius: 5px;
+    padding: 26px 36px;
+    position: relative;
+    white-space: nowrap;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 2px;
+        right: 2px;
+        height: 18px;
+        bottom: -7.9px;
+        z-index: 2;
+        background: $gradient;
+        border-radius: 50%;
+    }
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    
+    gap: 26px;
+    max-width: min(560px, 100%);
+
+    @media (max-width: 1100px) {
+        text-align: center;
+        padding: 50px 0px 0px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0px auto;
+    }
+}

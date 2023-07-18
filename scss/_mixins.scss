@@ -1,0 +1,4 @@
+@mixin font($weight) {
+    font-family: Gilroy, sans-serif;
+    font-weight: $weight;
+}

@@ -1,0 +1,23 @@
+p {
+    font-size: 17px;
+
+    &.accent {
+        font-size: 20px;
+        font-weight: 500;
+        color: $blue;
+    }
+
+    &.uppercase {
+        text-transform: uppercase;
+    }
+
+    &.second {
+        font-size: 15px;
+        color: $second;
+
+        a {
+            text-decoration: underline;
+            color: $second;
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.works {
+    padding: 100px 0px 50px;
+    text-align: center;
+    position: relative;
+
+    @media (max-width: 767px) {
+        padding: 70px 30px 50px;
+    }
+
+    p {
+        padding: 20px 0px 40px;
+
+        @media (max-width: 767px) {
+            text-align: left;
+        }
+    }
+
+    .swiper-slide {
+        border-radius: 20px;
+        width: 680px;
+        height: 360px;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.3;
+        transition: opacity 1s linear;
+
+        @media (max-width: 968px) {
+            width: 290px;
+            height: 195px;
+        }
+
+        @media (max-width: 767px) {
+            opacity: 0;
+        }
+
+        &-active {
+            opacity: 1;
+        }
+    }
+
+    .swiper-navigation {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: calc(80px + 680px);
+        left: 50%;
+        bottom: calc(50px + (360px / 2) + 50px + 15px);
+        transform: translate(-50%, 50%);
+        z-index: 2;
+
+        @media (max-width: 968px) {
+            bottom: calc(50px + (195px / 2) + 50px + 15px);
+            gap: calc(30px + 290px);
+        }
+
+        @media (max-width: 767px) {
+            width: 100vw;
+            justify-content: space-between;
+            gap: 0;
+            bottom: calc(50px + (195px / 2) + 50px + 12px);
+        }
+    }
+
+    .swiper-prev,
+    .swiper-next {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        background: rgba($color: #fff, $alpha: 0.3) url('../img/arrow-icon.svg') no-repeat center;
+        background-size: 20px 20px;
+
+        @media (max-width: 767px) {
+            width: 30px;
+            height: 30px;
+            background-size: 14px 14px;
+        }
+    }
+
+    .swiper-prev {
+        transform: rotate(180deg);
+    }
+
+    .swiper-button-disabled {
+        opacity: 0;
+    }
+
+    .swiper-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        position: relative;
+        padding: 50px 0px 0px;
+
+        &-bullet {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #595857;
+            opacity: 1;
+
+            &-active {
+                background: #fff;
+            }
+
+            @media (max-width: 767px) {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+}

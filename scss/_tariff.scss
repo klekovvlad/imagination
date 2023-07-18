@@ -1,0 +1,99 @@
+.tariff {
+    padding: 70px 0px;
+    background: url('../img/tariff-bg.png') no-repeat center;
+    background-size: 900px;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 500px;
+        height: 600px;
+        border-radius: 50%;
+        background: $blue;
+        filter: blur(300px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    @media (max-width: 767px) {
+        background: transparent;
+        &::before {
+            display: none;
+        }
+    }
+
+    &-box {
+        padding: 35px;
+        max-width: min(440px, 100%);
+        margin: 0px auto;
+        border-radius: 20px;
+        background: $box_bg;
+        border: 2px solid $box_border;
+        text-align: center;
+
+        @media (max-width: 767px) {
+            padding: 30px 20px 10px;
+        }
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: min(290px, 100%);
+        margin: 0px auto;
+        gap: 10px;
+
+        .button {
+            width: min(290px, 100%);
+            padding: 22px 36px;
+        }
+    }
+
+    h2 {
+        padding: 0px 0px 25px;
+    }
+
+    p.uppercase {
+        padding: 0px 0px 20px;
+    }
+
+    ul.list-accentbullet {
+        gap: 10px;
+        padding: 0px 80px;
+        text-align: left;
+
+        li {
+            color: $gray;
+        }
+
+        @media (max-width: 767px) {
+            padding: 0px 20px;
+
+            li {
+                padding: 0px 0px 0px 28px;
+            }
+        }
+    }
+
+    .prices {
+        padding: 30px 0px 45px;
+
+        @media (max-width: 767px) {
+            padding: 30px 0px 30px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .buttons {
+            padding: 0;
+        }
+    }
+    
+    p.second {
+        padding: 45px 0px 0px;
+    }
+}

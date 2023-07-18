@@ -1,0 +1,28 @@
+.input {
+    width: 100%;
+    color: #fff;
+    font-size: 17px;
+    @include font(400);
+    background: transparent;
+    border: 1px solid $gray;
+    border-radius: 10px;
+    padding: 16px 20px;
+
+    &::placeholder {
+        color: $input_placeholder;
+        font-size: 17px;
+        @include font(400);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &-date {
+        cursor: pointer;
+    }
+
+    @media (max-width: 767px) {
+        padding: 12px;
+    }
+}

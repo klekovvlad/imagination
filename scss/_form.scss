@@ -1,0 +1,127 @@
+.form {
+    padding: 80px 0px;
+    position: relative;
+
+    @media (max-width: 767px) {
+        padding: 50px 0px;
+    }
+
+    &::before {
+        content: '';
+        height: 150%;
+        width: 200px;
+        background: $blue;
+        border-radius: 50%;
+        position: absolute;
+        top: -60%;
+        right: 0;
+        filter: blur(180px);
+        transform: translate(50%, 0);
+        z-index: -1;
+
+        @media (max-width: 767px) {
+            height: 200px;
+            width: 200px;
+            top: 50%;
+            filter: blur(120px);
+        }
+    }
+    
+    h2 {
+        text-align: center;
+    }
+
+    .subtitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        max-width: min(890px, 100%);
+        margin: 0px auto;
+        padding: 35px 0px;
+
+        .prices {
+            white-space: nowrap;
+        }
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            padding: 20px 0px;
+            gap: 20px;
+        }
+    }
+
+    &-box {
+        background: $box_bg;
+        border: 2px solid $box_border;
+        border-radius: 20px;
+        padding: 30px 40px 35px;
+        max-width: min(640px, 100%);
+        margin: 0px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 20px;
+        
+
+        @media (max-width: 767px) {
+            padding: 20px 22px 30px;
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                width: 150px;
+                height: 150px;
+                filter: blur(80px);
+                top: -50%;
+                left: -50%;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+
+    &-wrapper {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 1100px;
+            background: url('../img/form-bg.png') no-repeat center;
+            background-size: 1100px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -2;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: $blue;
+            border-radius: 50%;
+            filter: blur(300px);
+            top: 0%;
+            left: -20%;
+            z-index: -2;
+        }
+    }
+
+    .buttons {
+        padding: 15px 0px;
+        .button {
+            flex: 0 0 50%;
+            padding: 22px 36px;
+
+            @media (max-width: 767px) {
+                flex: 0 0 100%;
+                width: 100%;
+            }
+        }
+    }
+}

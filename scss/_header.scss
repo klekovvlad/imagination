@@ -1,0 +1,192 @@
+.header {
+    padding: 30px 0px 0px;
+    position: relative;
+    background: url('../img/hero-bg.webp') no-repeat top left;
+    background-size: 120px 175px;
+
+    @media (max-width: 1250px) {
+        background: transparent;
+    }
+
+    .logo {
+        opacity: 0;
+        animation: opacity 1s linear forwards;
+    }
+        
+    &-wrapper {
+        max-width: 50%;
+
+        @media (max-width: 1100px) {
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+
+    &-titles {
+        padding: 56px 0px;
+
+        @media (max-width: 767px) {
+            padding: 20px 0px 24px;
+        }
+    }
+
+    &-author {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 8px;
+        margin: 0px 0px 20px;
+        transform: translate(-50px, 0);
+        opacity: 0;
+        animation: show .5s linear forwards;
+
+        @media (max-width: 1100px) {
+            justify-content: center;
+        }
+
+        @media (max-width: 767px) {
+            transform: translate(0px, 50px);
+        }
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: url('../img/verification-icon.png') no-repeat center;
+            background-size: contain;
+            animation: shape .3s .5s linear forwards;
+
+            @media (max-width: 767px) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &-text {
+            max-width: max-content;
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 500;
+            color: #fff;
+            border-radius: 5px;
+            background: $blue;
+            padding: 8px 10px;
+
+            @media (max-width: 767px) {
+                font-size: 13px;
+                padding: 5px 8px;
+            }
+        }
+    }
+
+    &-promotion {
+        font-size: 17px;
+
+        @media (max-width: 767px) {
+            font-size: 14px;
+            max-width: min(210px, 100%);
+            margin: 0px auto;
+        }
+    }
+
+    .title {
+        font-size: 39px;
+        line-height: 1.38;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin: 0px 0px 20px;
+        transform: translate(-50px, 0);
+        opacity: 0;
+        animation: show .5s .5s linear forwards;
+
+        @media (max-width: 767px) {
+            font-size: 29px;
+            transform: translate(0px, 50px);
+
+            span.blue {
+                display: block;
+            }
+        }
+    }
+
+    .subtitle {
+        font-size: 20px;
+        line-height: 1.5;
+        transform: translate(-50px, 0);
+        opacity: 0;
+        animation: show .5s 1s linear forwards;
+
+        @media (max-width: 767px) {
+            font-size: 16px;
+            transform: translate(0px, 50px);
+        }
+    }
+
+    &-img {
+        position: absolute;
+        width: 50vw;
+        right: 0;
+        top: 20px;
+
+        @media (max-width: 1400px) {
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        @media (max-width: 1100px) {
+            position: relative;
+            width: 100vw;
+            right: 0;
+            left: -30px;
+            top: 0;
+            transform: translate(0, 0);
+        }
+
+        img {
+            position: relative;
+            z-index: 2;
+        }
+
+        &::before {
+            content: '';
+            width: 350px;
+            height: 350px;
+            background: $blue;
+            filter: blur(200px);
+            position: absolute;
+            bottom: 30%;
+            left: 30%;
+
+            @media (max-width: 767px) {
+                width: 200px;
+                height: 200px;
+                filter: blur(80px);
+                bottom: 50%;
+                left: 50%;
+                transform: translate(-50%, 50%);
+            }
+        }
+    }
+
+    .buttons {
+        transform: translate(0, 50px);
+        opacity: 0;
+        animation: buttonShow .5s 1.5s linear forwards;
+
+        .button {
+            position: relative;
+            z-index: 2;
+        }
+
+        p {
+            transform: translate(-50px, 0);
+            opacity: 0;
+            animation: show .5s 2s linear forwards;
+
+            @media (max-width: 767px) {
+                transform: translate(0px, -50px);
+            }
+        }
+    }
+}

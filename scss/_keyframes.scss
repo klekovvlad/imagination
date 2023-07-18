@@ -1,0 +1,42 @@
+@keyframes opacity {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes show {
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes buttonShow {
+    25% {
+        opacity: 0.3;
+        transform: translate(0, 40px) scale(1.01);
+    }
+    75% {
+        opacity: 0.6;
+        transform: translate(0, 20px) scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes shape {
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

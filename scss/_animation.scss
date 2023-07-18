@@ -1,0 +1,23 @@
+.animation {
+    transition: opacity .5s linear, transform .5s linear;
+}
+
+.animation-right {
+    opacity: 0;
+    transform: translate(50px, 0px);
+}
+
+.animation-left {
+    opacity: 0;
+    transform: translate(-50px, 0px);
+}
+
+.animation-bottom {
+    opacity: 0;
+    transform: translate(0px, 50px);
+}
+
+.animation-active {
+    opacity: 1;
+    transform: translate(0, 0);
+}

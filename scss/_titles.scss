@@ -1,0 +1,14 @@
+h2 {
+    font-size: 39px;
+    line-height: 1.38;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    @media (max-width: 1100px) {
+        text-align: center;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 25px;
+    }
+}
