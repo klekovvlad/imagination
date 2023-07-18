@@ -41,24 +41,23 @@ if(faq) {
 
         faqItems.forEach((item, index) => {
             const answer = item.querySelector('.faq-answer')
-            let answerHeight = answer.scrollHeight;
+            const question = item.querySelector('.faq-question')
+            let answerHeight = answer.offsetHeight;
                         
             item.onclick = () => {
                 for(let i = 0; i < faqItems.length; i++) {
                     if(i !== index) {
                         faqItems[i].classList.remove('active')
-                        let answer = faqItems[i].querySelector('.faq-answer')
-                        answer.style.maxHeight = '0px'
-                        answer.style.paddingTop = '0px'
+                        let question = faqItems[i].querySelector('.faq-question')
+                        question.style.paddingBottom = '0px'
                     }
                 }
                 if(item.classList.contains('active')) {
                     item.classList.remove('active')
-                    answer.style.maxHeight = '0px'
-                    answer.style.paddingTop = '0px'
+                    question.style.paddingBottom = '0px'
                 }else {
                     item.classList.add('active')
-                    answer.style.maxHeight = `${answerHeight}px`
+                    question.style.paddingBottom = `${answerHeight}px`
                 }
             }
         })

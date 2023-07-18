@@ -541,7 +541,7 @@ ul.list.list-numbers .number {
   position: absolute;
   width: 50vw;
   right: 0;
-  top: 20px;
+  top: 0px;
 }
 @media (max-width: 1400px) {
   .header-img {
@@ -614,7 +614,7 @@ ul.list.list-numbers .number {
 }
 
 .why {
-  padding: 90px 0px 0px;
+  padding: 120px 0px 0px;
   position: relative;
 }
 @media (max-width: 767px) {
@@ -1523,6 +1523,7 @@ ul.list.list-numbers .number {
   }
 }
 .faq-item {
+  position: relative;
   cursor: pointer;
   padding: 25px 0px;
   border-bottom: 1px solid #C9C9C9;
@@ -1547,6 +1548,7 @@ ul.list.list-numbers .number {
 }
 .faq-item.active .faq-answer {
   opacity: 1;
+  visibility: visible;
 }
 @media (max-width: 767px) {
   .faq-item {
@@ -1608,15 +1610,22 @@ ul.list.list-numbers .number {
   }
 }
 .faq-answer {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
   opacity: 0;
-  max-height: 0;
-  -webkit-transition: max-height 0.3s linear, opacity 0.3s linear;
-  transition: max-height 0.3s linear, opacity 0.3s linear;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0.2s linear;
+  transition: opacity 0.3s 0.2s linear;
+  padding: 20px 0px 0px;
 }
 @media (max-width: 767px) {
   .faq-answer {
     font-size: 12px;
     color: #828282;
+    bottom: 14px;
+    padding: 14px 0px 0px;
   }
 }
 
